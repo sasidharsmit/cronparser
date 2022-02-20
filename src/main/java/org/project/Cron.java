@@ -18,8 +18,7 @@ public class Cron {
      * Initialises the Cron object with the provided cron expression
      *
      * @param cronString Valid cron expression
-     * @Exception EmptyInputException if input is null
-     * @see EmptyInputException
+     * @throws EmptyInputException if input is empty or null
      */
     public Cron(String[] cronString) throws EmptyInputException {
         if (cronString == null) {

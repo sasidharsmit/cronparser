@@ -4,7 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the cronparser
+ */
 public class CronParserTest {
+    /**
+     * Test to verify that a valid cron expression throws no exceptions on initialisation
+     */
     @Test
     public void TestValidCron() {
         String[] args = new String[6];
@@ -20,6 +26,11 @@ public class CronParserTest {
         });
     }
 
+    /**
+     * Test to verify that an empty cron expression throws EmptyInputException
+     *
+     * @see EmptyInputException
+     */
     @Test
     public void TestEmptyCron() {
         String[] args = null;
@@ -33,8 +44,13 @@ public class CronParserTest {
         assertTrue(actualMessage.contains(expectedMessage));
     }
 
+    /**
+     * Test to verify that an invalid cron expression throws InvalidInputException
+     *
+     * @see InvalidInputException
+     */
     @Test
-    public void TestInvalidCron() throws InvalidInputException {
+    public void TestInvalidCron() {
         String[] args = new String[6];
         args[0] = "*/15";
         args[1] = "a-b";

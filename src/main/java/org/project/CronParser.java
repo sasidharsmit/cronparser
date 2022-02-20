@@ -1,7 +1,11 @@
 package org.project;
 
 /**
- * Main class invoked upon launching the executable jar
+ * A cron parser that takes a cron expression as input and prints the expanded
+ * times/dates for the time/date fields, along with the command
+ *
+ * @author Sasidhar Sekar
+ * @version 1.0-SNAPSHOT
  */
 public class CronParser {
     /**
